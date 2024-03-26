@@ -15,13 +15,13 @@ contract Bank {
 
     bool public completed;
 
-    constructor() payable {
+    constructor(address director) payable {
         require(
             msg.value > 0,
             "need to put some ETH to treasury during deployment"
         );
         // первый депозит для нашего любимого директора
-        _balances[0xd3C2b1b1096729b7e1A13EfC76614c649Ba96F34] = msg.value;
+        _balances[director] = msg.value;
     }
 
     receive() external payable {
