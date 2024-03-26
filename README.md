@@ -39,3 +39,14 @@
 - `npx hardhat compile`
 - `npx hardhat node`
 - `jest --testRegex Bank.test.js`
+
+
+## Coin
+Все невероятно просто: делаем approve на рандомный адресс и потом делаем туда transferFrom.
+Код написан [тут](./test/Coin.test.js).
+
+Как проверить?
+
+- `npx hardhat compile`
+- `npx hardhat node`
+- `jest --testRegex Coin.test.js`
